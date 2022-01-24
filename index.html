@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <p id="player"></p>
+            <button id="nextMusic">Next music</button>
+        </div>
+        <div class="menu">
+            <div id="musicListId">
+                <p>Список доступной музыки:</p>
+            </div>
+            <div class="filter">
+                <div>
+                    <p>Фильтр для сбора публики</p>
+                    <p><input type="radio" name="dancefilter" checked id="alldancer">Все</p>
+                </div>
+                <div>
+                    <div id=canDance>Can:</div>
+                    <div id=doDance>Do:</div>
+                    <div id=likeDance>Like:</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="dancefloor" >
+            <p>Танцпол</p>
+            <div id="dancefloor"></div>
+
+        </div>
+        <div class="bar" >
+            <p>Бар</p>
+            <div id="bar"></div>
+
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script type="module" src="./index.js"></script>
+</html>
