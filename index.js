@@ -26,8 +26,8 @@ function shuffle(array) {
   }
 
 function createPersons() {  //создаем произвольное кол-во персонажей
-    const max = 15;
-    const min = 8;
+    const max = 30;
+    const min = 10;
     const amountPersons = Math.floor(Math.random() * (max - min) + min);
     for (let i=1; i <= amountPersons; i++) {
         let obj = {"id" : i}
@@ -99,7 +99,7 @@ function editPersonsList(e) {
         personsList = Array.from(persons)
     } else {
         let arr = e.target.value.split(',')
-        personsList = persons.filter(person => person[arr[0]][arr[1]] != true)
+        personsList = persons.filter(person => person[arr[0]][arr[1]] == true)
     }
     danceOrDrink()
 }
@@ -111,19 +111,21 @@ function danceOrDrink() {
     let danceArr = [];
     allMusic[playMusicNow].dances_id.map(id => danceArr.push(allDance.find(dance => dance.id == id)))
     arrPersonList.forEach(person => {
-        danceArr.forEach(dance => {
+        for (let dance of danceArr) {
             if (person[dance.type]['can'] || person[dance.type]['do']) {
                 let div = document.createElement('div');
-                // div.innerHTML = `танцует ${dance.type}`
                 div.className = `${dance.type}`
+                div.innerHTML = `id ${person.id}`
                 dancefloor.append(div)
-                arrPersonList.splice(arrPersonList.indexOf(person),1)
+                arrPersonList.splice(arrPersonList.indexOf(person),1,"")
+                break
             }
-        })
+        }
     })
-    arrPersonList.forEach(() => {
+    arrPersonList = arrPersonList.filter(person => person != "")
+    arrPersonList.forEach((e) => {
         let div = document.createElement('div');
-        div.innerHTML = 'пьет'
+        div.innerHTML = `id ${e.id} пьет`
         div.className = 'drink'
         bar.append(div)
     })
