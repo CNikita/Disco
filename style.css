@@ -76,10 +76,10 @@ main {
 
 @keyframes pop_dance {
 from {
-    background-image: url(/images/pop_dance1.jpg);
+    background-image: url(./images/pop_dance1.jpg);
 }
 to {
-    background-image: url(/images/pop_dance2.jpg);
+    background-image: url(./images/pop_dance2.jpg);
 }
 }
 
@@ -89,11 +89,11 @@ to {
 
 @keyframes electro_dance {
     from {
-        background-image: url(/images/electro_dance1.jpg);
+        background-image: url(./images/electro_dance1.jpg);
     }
     
     to {
-        background-image: url(/images/electro_dance2.jpg);
+        background-image: url(./images/electro_dance2.jpg);
     }
 }
 
@@ -103,10 +103,10 @@ to {
 
 @keyframes hip_hop_dance {
     from {
-        background-image: url(/images/hip_hop_dance1.jpg);
+        background-image: url(./images/hip_hop_dance1.jpg);
     }
     
     to {
-        background-image: url(/images/hip_hop_dance2.jpg);
+        background-image: url(./images/hip_hop_dance2.jpg);
     }
 }
